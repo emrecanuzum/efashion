@@ -1,0 +1,90 @@
+﻿.image1 {
+    position: absolute;
+    left: 15%;
+    top: 85%;
+    border: 1px solid darkgray;
+    box-shadow: 1px 2px 4px;
+}
+
+h1 {
+    position: absolute;
+    color: antiquewhite;
+    font-size: 100px;
+    font-family: barlow condensed,sans-serif;
+    text-transform: capitalize;
+    width: 460px;
+    word-spacing: 0px;
+    font-weight: normal;
+    line-height: 72px;
+}
+
+h2 {
+    color: slateblue;
+    position: absolute;
+    left: 108.5%;
+    top: 7%;
+    width: 300px;
+    font-size: 55px;
+    font-family: barlow condensed,sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.image2:hover {
+    box-shadow: 3px 3px 9px;
+}
+
+p {
+    color: salmon;
+    position: absolute;
+    left: 120%;
+    top: 25%;
+    width: 460px;
+    font-size: 25px;
+    font-family: barlow condensed,sans-serif;
+    font-weight: normal;
+    text-align: justify;
+}
+
+
+.aboutuscover img {
+    position: relative;
+    left: -34.3%;
+    width: 1920px;
+    height: 550px;
+}
+
+.aboutustext {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+}
+
+.map {
+    position: absolute;
+    left: 45%;
+    padding-top: 750px;
+}
+
+h3 {
+    color: slateblue;
+    position: absolute;
+    top: 143%;
+    width: 300px;
+    font-size: 55px;
+    font-family: barlow condensed,sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+p2 {
+    color: salmon;
+    position: absolute;
+    left: 18%;
+    top: 155%;
+    width: 460px;
+    font-size: 25px;
+    font-family: barlow condensed,sans-serif;
+    font-weight: normal;
+    text-align: justify;
+}

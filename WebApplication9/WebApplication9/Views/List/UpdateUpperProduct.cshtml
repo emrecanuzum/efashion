@@ -1,0 +1,29 @@
+﻿@model WebApplication9.Models.UpperBodyOutfit
+@{
+    ViewBag.Title = "UpdateUpperProduct";
+}
+
+@using (Html.BeginForm("UpdateUpper","List",FormMethod.Post))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.UpperBodyID)
+    @Html.TextBoxFor(m => m.UpperBodyID, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.Type)
+    @Html.TextBoxFor(m => m.Type, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.Size)
+    @Html.TextBoxFor(m => m.Size, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.Color)
+    @Html.TextBoxFor(m => m.Color, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.Sex)
+    @Html.TextBoxFor(m => m.Sex, new { @class = "form-control" })
+</div>
+<div>
+    <button class="btn btn-warning">Update Product</button>
+</div>
+}
+
+

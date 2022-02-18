@@ -1,0 +1,174 @@
+﻿/*.body {
+    background-image: url('../../Content/Image/background.jpg');
+}
+
+.leftside, .rightside, .three, .four {
+    height: 15vh;
+    width: 100%;
+}
+
+.leftside {
+    background: green;
+}
+
+.rightside {
+    background: lightslategrey;
+}
+
+.three {
+    background: dimgrey;
+}
+
+.four {
+    background: darkgrey;
+}
+
+*/
+#NW {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 15;
+    left: 0;
+    background-image: url('pant.jpg');
+    background-size: 960px 540px;
+    background-repeat: no-repeat;
+    transition: transform .9s, filter 1.0s ease-in-out;
+    filter: blur(4px);
+    border-left: 1px solid white;
+}
+
+    #NW:hover {
+        filter: blur(1.5px);
+    }
+
+#NE {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 15;
+    left: 50%;
+    background-image: url('sweatshirt.jpg');
+    background-size: 960px 540px;
+    background-repeat: no-repeat;
+    transition: transform .9s, filter 1.0s ease-in-out;
+    filter: blur(4px);
+    border-left: 1px solid white;
+}
+
+    #NE:hover {
+        filter: blur(1.5px);
+    }
+
+#SW {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 53%;
+    left: 0;
+    background-image: url('shoe.jpg');
+    background-size: 960px 540px;
+    background-repeat: no-repeat;
+    transition: transform .9s, filter 1.0s ease-in-out;
+    filter: blur(4px);
+    border-top: 1px solid white;
+}
+
+    #SW:hover {
+        filter: blur(1.5px);
+    }
+
+#SE {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 53%;
+    left: 50%;
+    background-image: url('rolex.jpg');
+    background-size: 960px 540px;
+    background-repeat: no-repeat;
+    transition: transform .9s, filter 1.0s ease-in-out;
+    filter: blur(4px);
+    border-top: 1px solid white;
+}
+
+    #SE:hover {
+        filter: blur(1.5px);
+    }
+
+
+h1 {
+    font-size: 110px;
+    position: absolute;
+    top: 7.5%;
+    left: 10%;
+    color: greenyellow;
+    font-family: barlow condensed,sans-serif;
+    text-transform: capitalize;
+    width: 720px;
+    word-spacing: 0px;
+    filter: blur(0px);
+    font-weight: normal;
+}
+
+    h1:hover {
+        color: slateblue;
+        text-decoration: none;
+    }
+
+h2 {
+    font-size: 110px;
+    position: absolute;
+    top: 7.5%;
+    left: 60%;
+    color: greenyellow;
+    font-family: barlow condensed,sans-serif;
+    text-transform: capitalize;
+    width: 720px;
+    word-spacing: 0px;
+    filter: blur(0px);
+    font-weight: normal;
+}
+
+    h2:hover {
+        color: slateblue;
+        text-decoration: none;
+    }
+
+h3 {
+    font-size: 110px;
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    color: greenyellow;
+    font-family: barlow condensed,sans-serif;
+    text-transform: capitalize;
+    width: 720px;
+    word-spacing: 0px;
+    filter: blur(0px);
+    font-weight: normal;
+}
+
+    h3:hover {
+        color: slateblue;
+        text-decoration: none;
+    }
+
+h4 {
+    font-size: 110px;
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    color: greenyellow;
+    font-family: barlow condensed,sans-serif;
+    text-transform: capitalize;
+    width: 720px;
+    word-spacing: 0px;
+    filter: blur(0px);
+    font-weight: normal;
+}
+
+    h4:hover {
+        color: slateblue;
+        text-decoration: none;
+    }

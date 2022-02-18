@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="eFashionPortalModelStoreContainer" CdmEntityContainer="eFashionPortalEntities3">
+    <EntitySetMapping Name="Accessory">
+      <EntityTypeMapping TypeName="eFashionPortalModel.Accessory">
+        <MappingFragment StoreEntitySet="Accessory">
+          <ScalarProperty Name="AccessoryID" ColumnName="AccessoryID" />
+          <ScalarProperty Name="CombineID" ColumnName="CombineID" />
+          <ScalarProperty Name="AccessoryName" ColumnName="AccessoryName" />
+          <ScalarProperty Name="AccessoryType" ColumnName="AccessoryType" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Designers">
+      <EntityTypeMapping TypeName="eFashionPortalModel.Designers">
+        <MappingFragment StoreEntitySet="Designers">
+          <ScalarProperty Name="DesignerID" ColumnName="DesignerID" />
+          <ScalarProperty Name="DesignerName" ColumnName="DesignerName" />
+          <ScalarProperty Name="DesignerLastName" ColumnName="DesignerLastName" />
+          <ScalarProperty Name="DesignerPhone" ColumnName="DesignerPhone" />
+          <ScalarProperty Name="DesignerPassword" ColumnName="DesignerPassword" />
+          <ScalarProperty Name="DesignerEmail" ColumnName="DesignerEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FashionShow">
+      <EntityTypeMapping TypeName="eFashionPortalModel.FashionShow">
+        <MappingFragment StoreEntitySet="FashionShow">
+          <ScalarProperty Name="FashionShowID" ColumnName="FashionShowID" />
+          <ScalarProperty Name="FashionShowName" ColumnName="FashionShowName" />
+          <ScalarProperty Name="FashionShowDate" ColumnName="FashionShowDate" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="DesignerID" ColumnName="DesignerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LowerBodyOutfit">
+      <EntityTypeMapping TypeName="eFashionPortalModel.LowerBodyOutfit">
+        <MappingFragment StoreEntitySet="LowerBodyOutfit">
+          <ScalarProperty Name="LowerBodyID" ColumnName="LowerBodyID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="eFashionPortalModel.Models">
+        <MappingFragment StoreEntitySet="Models">
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="ModelLastName" ColumnName="ModelLastName" />
+          <ScalarProperty Name="ModelPhone" ColumnName="ModelPhone" />
+          <ScalarProperty Name="ModelPassword" ColumnName="ModelPassword" />
+          <ScalarProperty Name="ModelEmail" ColumnName="ModelEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShoeProperties">
+      <EntityTypeMapping TypeName="eFashionPortalModel.ShoeProperties">
+        <MappingFragment StoreEntitySet="ShoeProperties">
+          <ScalarProperty Name="ShoeID" ColumnName="ShoeID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UpperBodyOutfit">
+      <EntityTypeMapping TypeName="eFashionPortalModel.UpperBodyOutfit">
+        <MappingFragment StoreEntitySet="UpperBodyOutfit">
+          <ScalarProperty Name="UpperBodyID" ColumnName="UpperBodyID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Outfit">
+      <EntityTypeMapping TypeName="eFashionPortalModel.Outfit">
+        <MappingFragment StoreEntitySet="Outfit">
+          <ScalarProperty Name="CombineID" ColumnName="CombineID" />
+          <ScalarProperty Name="UpperBodyID" ColumnName="UpperBodyID" />
+          <ScalarProperty Name="LowerBodyID" ColumnName="LowerBodyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TechnicalDetail">
+      <EntityTypeMapping TypeName="eFashionPortalModel.TechnicalDetail">
+        <MappingFragment StoreEntitySet="TechnicalDetail">
+          <ScalarProperty Name="UpperBodyID" ColumnName="UpperBodyID" />
+          <ScalarProperty Name="LowerBodyID" ColumnName="LowerBodyID" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Shoes" TypeName="eFashionPortalModel.Shoes" StoreEntitySet="Shoes">
+      <EndProperty Name="Accessory">
+        <ScalarProperty Name="CombineID" ColumnName="CombineID" />
+      </EndProperty>
+      <EndProperty Name="ShoeProperties">
+        <ScalarProperty Name="ShoeID" ColumnName="ShoeID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

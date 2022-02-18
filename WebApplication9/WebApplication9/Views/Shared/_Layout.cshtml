@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title>E - Fashion Project</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" type="text/css" href="Site.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Mountains+of+Christmas|Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hanalei|Indie+Flower|Orbitron|Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|PT+Serif&display=swap" rel="stylesheet">
+
+    
+
+
+</head>
+<body>
+    <style>
+        body {
+            background-color: #E2DCDB;
+        }
+    </style>
+
+    <div class="topbar">
+
+        <ol>
+            @*<li><a href="">Landing</a></li>*@
+            <li><a href="https://localhost:44351/Home/">Home</a></li>
+            <li><a href="https://localhost:44351/Login/Designer">Designer</a></li>
+            <li><a href="https://localhost:44351/Home/Shop">Shop</a></li>
+            <li><a href="https://localhost:44351/ModelLogin/ModelLogin">List</a></li>
+            @*<li><a href="">Blog</a></li>*@
+            <li><a href="https://localhost:44351/Home/About">About</a></li>
+            @*<li><a href="">Contact</a></li>*@
+        </ol>
+
+
+        <div class="background">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+        </div>
+        <a href="https://localhost:44351/Home"><h2> E<font> - </font>Fashion</h2></a>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+
+
+
+</body>
+</html>

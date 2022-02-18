@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8ee8396378594e40a4ff3d75d3240b52" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="eFashionPortalModel.Accessory" Width="1.5" PointX="0.5" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="eFashionPortalModel.Designers" Width="1.5" PointX="9.625" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="eFashionPortalModel.FashionShow" Width="1.5" PointX="11.875" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="eFashionPortalModel.LowerBodyOutfit" Width="1.5" PointX="6.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="eFashionPortalModel.Models" Width="1.5" PointX="9.625" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="eFashionPortalModel.ShoeProperties" Width="1.5" PointX="0.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="eFashionPortalModel.UpperBodyOutfit" Width="1.5" PointX="2.875" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="eFashionPortalModel.Outfit" Width="1.5" PointX="4.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eFashionPortalModel.TechnicalDetail" Width="1.5" PointX="4.75" PointY="8.125" IsExpanded="true" />
+        <AssociationConnector Association="eFashionPortalModel.FK__Outfit__CombineI__55009F39" ManuallyRouted="false" />
+        <AssociationConnector Association="eFashionPortalModel.FK__FashionSh__Desig__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="eFashionPortalModel.FK__FashionSh__Model__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="eFashionPortalModel.FK__Outfit__LowerBod__56E8E7AB" ManuallyRouted="false" />
+        <AssociationConnector Association="eFashionPortalModel.FK__Technical__Lower__4C6B5938" ManuallyRouted="false" />
+        <AssociationConnector Association="eFashionPortalModel.FK__Outfit__UpperBod__55F4C372" ManuallyRouted="false" />
+        <AssociationConnector Association="eFashionPortalModel.FK__Technical__Upper__4B7734FF" ManuallyRouted="false" />
+        <AssociationConnector Association="eFashionPortalModel.Shoes" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

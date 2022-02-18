@@ -1,0 +1,110 @@
+﻿@model WebApplication9.Models.Models
+
+
+@{
+    ViewBag.Title = "Model";
+}
+
+
+<html>
+
+
+<head>
+
+    <style>
+        body {
+            background-image: url('../../Content/bg.jpg');
+        }
+        #login-div {
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            border: 1px solid #ccc;
+            padding: 10px 10px;
+        }
+
+        input[type=button], input[type=submit], input[type=reset] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .field-validation-error {
+            color: darkred;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div id="login-div">
+        @using (Html.BeginForm("Autherize", "ModelLogin", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td></td>
+                    <td>Model Login</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m => m.ModelEmail)
+                    </td>
+                    <td>
+                        @Html.EditorFor(m => m.ModelEmail)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>@Html.ValidationMessageFor(m => m.ModelEmail)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m => m.ModelPassword)
+                    </td>
+                    <td>
+                        @Html.EditorFor(m => m.ModelPassword)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>@Html.ValidationMessageFor(m => m.ModelPassword)</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <label class="field-validation-error">@Html.DisplayFor(m => m.LoginErrorMessage)</label>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="name" value="login" />
+                        <input type="reset" name="name" value="clear" />
+                    </td>
+                </tr>
+
+
+            </table>
+        }
+
+
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+
+
+
+</html>

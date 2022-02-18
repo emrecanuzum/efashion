@@ -1,0 +1,28 @@
+﻿@model WebApplication9.Models.LowerBodyOutfit
+@{
+    ViewBag.Title = "UpdateLowerProduct";
+}
+
+@using (Html.BeginForm("UpdateLower", "Lower", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.LowerBodyID)
+        @Html.TextBoxFor(m => m.LowerBodyID, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.Type)
+        @Html.TextBoxFor(m => m.Type, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.Size)
+        @Html.TextBoxFor(m => m.Size, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.Color)
+        @Html.TextBoxFor(m => m.Color, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.Sex)
+        @Html.TextBoxFor(m => m.Sex, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-warning">Update Product</button>
+    </div>
+}
+

@@ -1,0 +1,47 @@
+﻿@using WebApplication9.Models
+@model List<UpperBodyOutfit>
+@{
+    ViewBag.Title = "UpperList";
+}
+<style>
+
+    table, th, tr, td {
+        border: 2px solid black;
+    }
+</style>
+<hr>
+@using (Html.BeginForm("UpperList", "List", FormMethod.Get))
+{
+    <h5>
+        Seach For Type : @Html.TextBox("p")
+        <input type="submit" value="search" />
+    </h5>
+}
+<hr>
+
+<table class="table table-bordered">
+    <tr>
+        <th>OutfitID</th>
+        <th>Type</th>
+        <th>Size</th>
+        <th>Color</th>
+        <th>Sex</th>
+    </tr>
+    <tbody>
+        @foreach (var urn in Model)
+        {
+            <tr>
+                <th>@urn.UpperBodyID</th>
+                <td>@urn.Type</td>
+                <td>@urn.Size</td>
+                <td>@urn.Color</td>
+                <td>@urn.Sex</td>
+                <td>
+                    <a href="/List/DeleteUpperProduct/@urn.UpperBodyID" class="btn btn-danger">Delete</a>
+                    <a href="/List/UpdateUpperProduct/@urn.UpperBodyID" class="btn btn-success">Update</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/List/NewUpperProduct/" class="btn btn-primary">Add New Product</a>

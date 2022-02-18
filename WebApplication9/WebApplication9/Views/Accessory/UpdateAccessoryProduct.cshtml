@@ -1,0 +1,31 @@
+﻿@model WebApplication9.Models.Accessory
+@{
+    ViewBag.Title = "UpdateAccessoryProduct";
+}
+
+@using (Html.BeginForm("UpdateAccessory", "Accessory", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.AccessoryID)
+    @Html.TextBoxFor(m => m.AccessoryID, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.CombineID)
+    @Html.TextBoxFor(m => m.CombineID, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.AccessoryName)
+    @Html.TextBoxFor(m => m.AccessoryName, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.AccessoryType)
+    @Html.TextBoxFor(m => m.AccessoryType, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.Color)
+    @Html.TextBoxFor(m => m.Color, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.Sex)
+    @Html.TextBoxFor(m => m.Sex, new { @class = "form-control" })
+</div>
+    <div>
+        <button class="btn btn-warning">Update Product</button>
+    </div>
+}
+

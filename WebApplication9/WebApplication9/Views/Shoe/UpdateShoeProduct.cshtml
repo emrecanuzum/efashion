@@ -1,0 +1,28 @@
+﻿@model WebApplication9.Models.ShoeProperties
+@{
+    ViewBag.Title = "UpdateShoeProduct";
+}
+
+@using (Html.BeginForm("UpdateShoe", "Shoe", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.ShoeID)
+    @Html.TextBoxFor(m => m.ShoeID, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.Type)
+    @Html.TextBoxFor(m => m.Type, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.Size)
+    @Html.TextBoxFor(m => m.Size, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.Color)
+    @Html.TextBoxFor(m => m.Color, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.Sex)
+    @Html.TextBoxFor(m => m.Sex, new { @class = "form-control" })
+</div>
+    <div>
+        <button class="btn btn-warning">Update Shoe</button>
+    </div>
+}
+

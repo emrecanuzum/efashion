@@ -1,0 +1,50 @@
+﻿@using WebApplication9.Models
+@model List<Accessory>
+
+@{
+    ViewBag.Title = "AccessoryList";
+}
+<style>
+
+    table, th, tr, td {
+        border: 2px solid black;
+    }
+</style>
+<hr>
+@using (Html.BeginForm("Accessorys", "Accessory", FormMethod.Get))
+{
+    <h5>
+        Seach For Type : @Html.TextBox("p")
+        <input type="submit" value="search" />
+    </h5>
+}
+<hr>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>AccessoryID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Color</th>
+        <th>Sex</th>
+    </tr>
+    <tbody>
+        @foreach (var urn in Model)
+        {
+            <tr>
+                <th>@urn.AccessoryID</th>
+                <td>@urn.CombineID</td>
+                <td>@urn.AccessoryName</td>
+                <td>@urn.AccessoryType</td>
+                <td>@urn.Color</td>
+                <td>@urn.Sex</td>
+                <td>
+                    <a href="/Accessory/DeleteAccessoryProduct/@urn.AccessoryID" class="btn btn-danger">Delete</a>
+                    <a href="/Accessory/UpdateAccessoryProduct/@urn.AccessoryID" class="btn btn-success">Update</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Accessory/NewAccessoryProduct/" class="btn btn-primary">Add New Accessory</a>

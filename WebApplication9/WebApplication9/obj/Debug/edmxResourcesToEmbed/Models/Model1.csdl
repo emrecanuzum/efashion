@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eFashionPortalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Accessory">
+    <Key>
+      <PropertyRef Name="CombineID" />
+    </Key>
+    <Property Name="AccessoryID" Type="Int32" />
+    <Property Name="CombineID" Type="Int32" Nullable="false" />
+    <Property Name="AccessoryName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="AccessoryType" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Color" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Outfit" Relationship="Self.FK__Outfit__CombineI__55009F39" FromRole="Accessory" ToRole="Outfit" />
+    <NavigationProperty Name="ShoeProperties" Relationship="Self.Shoes" FromRole="Accessory" ToRole="ShoeProperties" />
+  </EntityType>
+  <EntityType Name="Designers">
+    <Key>
+      <PropertyRef Name="DesignerID" />
+    </Key>
+    <Property Name="DesignerID" Type="Int32" Nullable="false" />
+    <Property Name="DesignerName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DesignerLastName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DesignerPhone" Type="Int32" Nullable="false" />
+    <Property Name="DesignerPassword" Type="Int32" Nullable="false" />
+    <Property Name="DesignerEmail" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="FashionShow" Relationship="Self.FK__FashionSh__Desig__6383C8BA" FromRole="Designers" ToRole="FashionShow" />
+  </EntityType>
+  <EntityType Name="FashionShow">
+    <Key>
+      <PropertyRef Name="FashionShowID" />
+      <PropertyRef Name="ModelID" />
+      <PropertyRef Name="DesignerID" />
+    </Key>
+    <Property Name="FashionShowID" Type="Int32" Nullable="false" />
+    <Property Name="FashionShowName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="FashionShowDate" Type="DateTime" Precision="0" />
+    <Property Name="ModelID" Type="Int32" Nullable="false" />
+    <Property Name="DesignerID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Designers" Relationship="Self.FK__FashionSh__Desig__6383C8BA" FromRole="FashionShow" ToRole="Designers" />
+    <NavigationProperty Name="Models" Relationship="Self.FK__FashionSh__Model__628FA481" FromRole="FashionShow" ToRole="Models" />
+  </EntityType>
+  <EntityType Name="LowerBodyOutfit">
+    <Key>
+      <PropertyRef Name="LowerBodyID" />
+    </Key>
+    <Property Name="LowerBodyID" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Size" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Color" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Outfit" Relationship="Self.FK__Outfit__LowerBod__56E8E7AB" FromRole="LowerBodyOutfit" ToRole="Outfit" />
+    <NavigationProperty Name="TechnicalDetail" Relationship="Self.FK__Technical__Lower__4C6B5938" FromRole="LowerBodyOutfit" ToRole="TechnicalDetail" />
+  </EntityType>
+  <EntityType Name="Models">
+    <Key>
+      <PropertyRef Name="ModelID" />
+    </Key>
+    <Property Name="ModelID" Type="Int32" Nullable="false" />
+    <Property Name="ModelName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ModelLastName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ModelPhone" Type="Int32" Nullable="false" />
+    <Property Name="ModelPassword" Type="Int32" Nullable="false" />
+    <Property Name="ModelEmail" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="FashionShow" Relationship="Self.FK__FashionSh__Model__628FA481" FromRole="Models" ToRole="FashionShow" />
+  </EntityType>
+  <EntityType Name="ShoeProperties">
+    <Key>
+      <PropertyRef Name="ShoeID" />
+    </Key>
+    <Property Name="ShoeID" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Size" Type="Int32" />
+    <Property Name="Color" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Accessory" Relationship="Self.Shoes" FromRole="ShoeProperties" ToRole="Accessory" />
+  </EntityType>
+  <EntityType Name="UpperBodyOutfit">
+    <Key>
+      <PropertyRef Name="UpperBodyID" />
+    </Key>
+    <Property Name="UpperBodyID" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Size" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Color" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Outfit" Relationship="Self.FK__Outfit__UpperBod__55F4C372" FromRole="UpperBodyOutfit" ToRole="Outfit" />
+    <NavigationProperty Name="TechnicalDetail" Relationship="Self.FK__Technical__Upper__4B7734FF" FromRole="UpperBodyOutfit" ToRole="TechnicalDetail" />
+  </EntityType>
+  <EntityType Name="Outfit">
+    <Key>
+      <PropertyRef Name="CombineID" />
+      <PropertyRef Name="UpperBodyID" />
+      <PropertyRef Name="LowerBodyID" />
+    </Key>
+    <Property Name="CombineID" Type="Int32" Nullable="false" />
+    <Property Name="UpperBodyID" Type="Int32" Nullable="false" />
+    <Property Name="LowerBodyID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Accessory" Relationship="Self.FK__Outfit__CombineI__55009F39" FromRole="Outfit" ToRole="Accessory" />
+    <NavigationProperty Name="LowerBodyOutfit" Relationship="Self.FK__Outfit__LowerBod__56E8E7AB" FromRole="Outfit" ToRole="LowerBodyOutfit" />
+    <NavigationProperty Name="UpperBodyOutfit" Relationship="Self.FK__Outfit__UpperBod__55F4C372" FromRole="Outfit" ToRole="UpperBodyOutfit" />
+  </EntityType>
+  <EntityType Name="TechnicalDetail">
+    <Key>
+      <PropertyRef Name="UpperBodyID" />
+      <PropertyRef Name="LowerBodyID" />
+    </Key>
+    <Property Name="UpperBodyID" Type="Int32" Nullable="false" />
+    <Property Name="LowerBodyID" Type="Int32" Nullable="false" />
+    <Property Name="Manufacturer" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Material" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="LowerBodyOutfit" Relationship="Self.FK__Technical__Lower__4C6B5938" FromRole="TechnicalDetail" ToRole="LowerBodyOutfit" />
+    <NavigationProperty Name="UpperBodyOutfit" Relationship="Self.FK__Technical__Upper__4B7734FF" FromRole="TechnicalDetail" ToRole="UpperBodyOutfit" />
+  </EntityType>
+  <Association Name="FK__Outfit__CombineI__55009F39">
+    <End Role="Accessory" Type="Self.Accessory" Multiplicity="1" />
+    <End Role="Outfit" Type="Self.Outfit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accessory">
+        <PropertyRef Name="CombineID" />
+      </Principal>
+      <Dependent Role="Outfit">
+        <PropertyRef Name="CombineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FashionSh__Desig__6383C8BA">
+    <End Role="Designers" Type="Self.Designers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FashionShow" Type="Self.FashionShow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Designers">
+        <PropertyRef Name="DesignerID" />
+      </Principal>
+      <Dependent Role="FashionShow">
+        <PropertyRef Name="DesignerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FashionSh__Model__628FA481">
+    <End Role="Models" Type="Self.Models" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FashionShow" Type="Self.FashionShow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Models">
+        <PropertyRef Name="ModelID" />
+      </Principal>
+      <Dependent Role="FashionShow">
+        <PropertyRef Name="ModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Outfit__LowerBod__56E8E7AB">
+    <End Role="LowerBodyOutfit" Type="Self.LowerBodyOutfit" Multiplicity="1" />
+    <End Role="Outfit" Type="Self.Outfit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LowerBodyOutfit">
+        <PropertyRef Name="LowerBodyID" />
+      </Principal>
+      <Dependent Role="Outfit">
+        <PropertyRef Name="LowerBodyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Technical__Lower__4C6B5938">
+    <End Role="LowerBodyOutfit" Type="Self.LowerBodyOutfit" Multiplicity="1" />
+    <End Role="TechnicalDetail" Type="Self.TechnicalDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LowerBodyOutfit">
+        <PropertyRef Name="LowerBodyID" />
+      </Principal>
+      <Dependent Role="TechnicalDetail">
+        <PropertyRef Name="LowerBodyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Outfit__UpperBod__55F4C372">
+    <End Role="UpperBodyOutfit" Type="Self.UpperBodyOutfit" Multiplicity="1" />
+    <End Role="Outfit" Type="Self.Outfit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UpperBodyOutfit">
+        <PropertyRef Name="UpperBodyID" />
+      </Principal>
+      <Dependent Role="Outfit">
+        <PropertyRef Name="UpperBodyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Technical__Upper__4B7734FF">
+    <End Role="UpperBodyOutfit" Type="Self.UpperBodyOutfit" Multiplicity="1" />
+    <End Role="TechnicalDetail" Type="Self.TechnicalDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UpperBodyOutfit">
+        <PropertyRef Name="UpperBodyID" />
+      </Principal>
+      <Dependent Role="TechnicalDetail">
+        <PropertyRef Name="UpperBodyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Shoes">
+    <End Role="Accessory" Type="Self.Accessory" Multiplicity="*" />
+    <End Role="ShoeProperties" Type="Self.ShoeProperties" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="eFashionPortalEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accessory" EntityType="Self.Accessory" />
+    <EntitySet Name="Designers" EntityType="Self.Designers" />
+    <EntitySet Name="FashionShow" EntityType="Self.FashionShow" />
+    <EntitySet Name="LowerBodyOutfit" EntityType="Self.LowerBodyOutfit" />
+    <EntitySet Name="Models" EntityType="Self.Models" />
+    <EntitySet Name="ShoeProperties" EntityType="Self.ShoeProperties" />
+    <EntitySet Name="UpperBodyOutfit" EntityType="Self.UpperBodyOutfit" />
+    <EntitySet Name="Outfit" EntityType="Self.Outfit" />
+    <EntitySet Name="TechnicalDetail" EntityType="Self.TechnicalDetail" />
+    <AssociationSet Name="FK__Outfit__CombineI__55009F39" Association="Self.FK__Outfit__CombineI__55009F39">
+      <End Role="Accessory" EntitySet="Accessory" />
+      <End Role="Outfit" EntitySet="Outfit" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FashionSh__Desig__6383C8BA" Association="Self.FK__FashionSh__Desig__6383C8BA">
+      <End Role="Designers" EntitySet="Designers" />
+      <End Role="FashionShow" EntitySet="FashionShow" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FashionSh__Model__628FA481" Association="Self.FK__FashionSh__Model__628FA481">
+      <End Role="Models" EntitySet="Models" />
+      <End Role="FashionShow" EntitySet="FashionShow" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Outfit__LowerBod__56E8E7AB" Association="Self.FK__Outfit__LowerBod__56E8E7AB">
+      <End Role="LowerBodyOutfit" EntitySet="LowerBodyOutfit" />
+      <End Role="Outfit" EntitySet="Outfit" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Technical__Lower__4C6B5938" Association="Self.FK__Technical__Lower__4C6B5938">
+      <End Role="LowerBodyOutfit" EntitySet="LowerBodyOutfit" />
+      <End Role="TechnicalDetail" EntitySet="TechnicalDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Outfit__UpperBod__55F4C372" Association="Self.FK__Outfit__UpperBod__55F4C372">
+      <End Role="UpperBodyOutfit" EntitySet="UpperBodyOutfit" />
+      <End Role="Outfit" EntitySet="Outfit" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Technical__Upper__4B7734FF" Association="Self.FK__Technical__Upper__4B7734FF">
+      <End Role="UpperBodyOutfit" EntitySet="UpperBodyOutfit" />
+      <End Role="TechnicalDetail" EntitySet="TechnicalDetail" />
+    </AssociationSet>
+    <AssociationSet Name="Shoes" Association="Self.Shoes">
+      <End Role="Accessory" EntitySet="Accessory" />
+      <End Role="ShoeProperties" EntitySet="ShoeProperties" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

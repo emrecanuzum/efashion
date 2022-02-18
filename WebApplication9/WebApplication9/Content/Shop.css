@@ -1,0 +1,423 @@
+﻿.girl {
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 95%;
+    transition: transform .5s, filter 0.75s ease-in-out;
+    filter: grayscale(80%);
+}
+
+.upper {
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 95%;
+    transition: transform .5s, filter 0.75s ease-in-out;
+    filter: grayscale(80%);
+}
+
+.girl:hover {
+    transform: scale(1.01);
+    filter: grayscale(0);
+    text-decoration: none;
+}
+
+.boy {
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 95%;
+    transition: transform .5s, filter 0.75s ease-in-out;
+    filter: grayscale(80%);
+}
+
+.lower {
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 95%;
+    transition: transform .5s, filter 0.75s ease-in-out;
+    filter: grayscale(80%);
+}
+
+.boy:hover {
+    transform: scale(1.01);
+    filter: grayscale(0);
+    text-decoration: none;
+}
+
+.gtext {
+    position: absolute;
+    top: 30%;
+    left: 7%;
+}
+
+h7 {
+    font-size: 80px;
+    color: black;
+    font-family: barlow condensed,sans-serif;
+    text-transform: capitalize;
+    width: 460px;
+    word-spacing: 0px;
+    font-weight: normal;
+}
+
+    h7:hover {
+        color: purple;
+        text-decoration: none;
+    }
+
+
+.btext {
+    position: absolute;
+    top: 30%;
+    left: 85%;
+}
+
+
+.photo1 img {
+    width: 15%;
+    margin-left: 15%;
+    top: 25%;
+    position: absolute;
+    left: 0px;
+    height: 35%;
+}
+
+.photo1 .img-top {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 0px;
+    z-index: 99;
+}
+
+.photo1:hover .img-top {
+    display: inline;
+    box-shadow: 3px 3px 9px;
+}
+
+.photo2 img {
+    width: 15%;
+    margin-left: 35%;
+    top: 25%;
+    position: absolute;
+    left: 0px;
+    height: 35%;
+}
+
+.photo2 .img-top {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 0px;
+    z-index: 99;
+}
+
+.photo2:hover .img-top {
+    display: inline;
+    box-shadow: 3px 3px 9px;
+}
+
+.photo3 img {
+    width: 15%;
+    margin-left: 55%;
+    top: 25%;
+    position: absolute;
+    left: 0px;
+    height: 35%;
+}
+
+.photo3 .img-top {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 0px;
+    z-index: 99;
+}
+
+.photo3:hover .img-top {
+    display: inline;
+    box-shadow: 3px 3px 9px;
+}
+
+.photo4 img {
+    width: 15%;
+    margin-left: 75%;
+    top: 25%;
+    position: absolute;
+    left: 0px;
+    height: 35%;
+}
+
+.photo4 .img-top {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 0px;
+    z-index: 99;
+}
+
+.photo4:hover .img-top {
+    display: inline;
+    box-shadow: 3px 3px 9px;
+}
+
+.photo5 img {
+    width: 15%;
+    margin-left: 15%;
+    top: 75%;
+    position: absolute;
+    left: 0px;
+    height: 35%;
+}
+
+.photo5 .img-top {
+    display: none;
+    position: absolute;
+    top: 75%;
+    left: 0px;
+    z-index: 99;
+}
+
+.photo5:hover .img-top {
+    display: inline;
+    box-shadow: 3px 3px 9px;
+}
+
+.photo6 img {
+    width: 15%;
+    margin-left: 35%;
+    top: 75%;
+    position: absolute;
+    left: 0px;
+    height: 35%;
+}
+
+.photo6 .img-top {
+    display: none;
+    position: absolute;
+    top: 75%;
+    left: 0px;
+    z-index: 99;
+}
+
+.photo6:hover .img-top {
+    display: inline;
+    box-shadow: 3px 3px 9px;
+}
+
+.photo7 img {
+    width: 15%;
+    margin-left: 55%;
+    top: 75%;
+    position: absolute;
+    left: 0px;
+    height: 35%;
+}
+
+.photo7 .img-top {
+    display: none;
+    position: absolute;
+    top: 75%;
+    left: 0px;
+    z-index: 99;
+}
+
+.photo7:hover .img-top {
+    display: inline;
+    box-shadow: 3px 3px 9px;
+}
+
+.photo8 img {
+    width: 15%;
+    margin-left: 75%;
+    top: 75%;
+    position: absolute;
+    left: 0px;
+    height: 35%;
+}
+
+.photo8 .img-top {
+    display: none;
+    position: absolute;
+    top: 75%;
+    left: 0px;
+    z-index: 99;
+}
+
+.photo8:hover .img-top {
+    display: inline;
+    box-shadow: 3px 3px 9px;
+}
+
+.photo9 img {
+    width: 15%;
+    margin-left: 15%;
+    top: 125%;
+    position: absolute;
+    left: 0px;
+    height: 35%;
+}
+
+.photo9 .img-top {
+    display: none;
+    position: absolute;
+    top: 125%;
+    left: 0px;
+    z-index: 99;
+}
+
+.photo9:hover .img-top {
+    display: inline;
+    box-shadow: 3px 3px 9px;
+}
+
+.photo10 img {
+    width: 15%;
+    margin-left: 35%;
+    top: 125%;
+    position: absolute;
+    left: 0px;
+    height: 35%;
+}
+
+.photo10 .img-top {
+    display: none;
+    position: absolute;
+    top: 125%;
+    left: 0px;
+    z-index: 99;
+}
+
+.photo10:hover .img-top {
+    display: inline;
+    box-shadow: 3px 3px 9px;
+}
+
+.photo11 img {
+    width: 15%;
+    margin-left: 55%;
+    top: 125%;
+    position: absolute;
+    left: 0px;
+    height: 35%;
+}
+
+.photo11 .img-top {
+    display: none;
+    position: absolute;
+    top: 125%;
+    left: 0px;
+    z-index: 99;
+}
+
+.photo11:hover .img-top {
+    display: inline;
+    box-shadow: 3px 3px 9px;
+}
+
+.photo12 img {
+    width: 15%;
+    margin-left: 75%;
+    top: 125%;
+    position: absolute;
+    left: 0px;
+    height: 35%;
+}
+
+.photo12 .img-top {
+    display: none;
+    position: absolute;
+    top: 125%;
+    left: 0px;
+    z-index: 99;
+}
+
+.photo12:hover .img-top {
+    display: inline;
+    box-shadow: 3px 3px 9px;
+}
+
+h9 {
+    font-size: 35px;
+    color: black;
+    font-family: barlow condensed,sans-serif;
+    text-transform: capitalize;
+    width: 460px;
+    word-spacing: 0px;
+    font-weight: normal;
+}
+
+    h9:hover {
+        color: rebeccapurple;
+    }
+
+.p1text {
+    position: absolute;
+    margin-top: 27%;
+}
+
+.p2text {
+    position: absolute;
+    margin-top: 27%;
+    left: 40%;
+}
+
+.p3text {
+    position: absolute;
+    margin-top: 27%;
+    left: 60%;
+}
+
+.p4text {
+    position: absolute;
+    margin-top: 27%;
+    left: 80%;
+}
+
+.p5text {
+    position: absolute;
+    margin-top: 51.5%;
+}
+
+.p6text {
+    position: absolute;
+    margin-top: 51.5%;
+    left: 40%;
+}
+
+.p7text {
+    position: absolute;
+    margin-top: 51.5%;
+    left: 60%;
+}
+
+.p8text {
+    position: absolute;
+    margin-top: 51.5%;
+    left: 80%;
+}
+
+.p9text {
+    position: absolute;
+    margin-top: 76%;
+}
+
+.p10text {
+    position: absolute;
+    margin-top: 76%;
+    left: 40%;
+}
+
+.p11text {
+    position: absolute;
+    margin-top: 76%;
+    left: 60%;
+}
+
+.p12text {
+    position: absolute;
+    margin-top: 76%;
+    left: 80%;
+}

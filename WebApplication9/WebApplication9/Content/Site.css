@@ -1,0 +1,187 @@
+﻿
+
+.topbar {
+    border: 1px solid transparent;
+    background-color: whitesmoke;
+    height: 50px;
+}
+
+ol {
+    float: right;
+}
+
+    ol li {
+        float: left;
+        width: 90px;
+        position: relative;
+        margin-top: 1.1%;
+        left: -10%;
+        list-style-type: none;
+        font-family: barlow condensed,sans-serif;
+        font-size: 20px;
+    }
+
+        ol li a {
+            text-decoration: none;
+            color: black;
+        }
+
+            ol li a:hover {
+                border-bottom: 4px solid red;
+            }
+
+.fa-shopping-cart {
+    position: absolute;
+    left: 97%;
+    top: 2%;
+    color: black;
+    width: 25px;
+    height: -30px;
+    margin-top: -2px;
+    margin-left: -4px;
+}
+
+h2 {
+    position: absolute;
+    left: 1.7%;
+    margin-top: 0.5%;
+    text-transform: uppercase;
+    font-family: barlow condensed,sans-serif;
+    font-weight: bolder;
+}
+
+font {
+    color: red;
+}
+
+.cover img {
+    position: relative;
+    left: -34.3%;
+    width: 1920px;
+    height: 800px;
+}
+
+.text {
+    position: absolute;
+    top: 30%;
+    left: 7%;
+}
+
+h1 {
+    font-size: 70px;
+    font-family: barlow condensed,sans-serif;
+    text-transform: capitalize;
+    width: 460px;
+    word-spacing: 0px;
+    font-weight: normal;
+    line-height: 72px;
+}
+
+h4 {
+    position: absolute;
+    top: -4%;
+    left: 1%;
+    font-size: 20px;
+    font-family: barlow condensed,sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+hr.yline {
+    border-top: 10px solid yellow;
+    background-color: #fff;
+    box-shadow: 1px 0px 10px 2.5px #d8ff00
+}
+
+.image2 {
+    position: absolute;
+    left: 20%;
+    top: 100%;
+    border: 1px solid darkgray;
+    box-shadow: 1px 2px 4px;
+}
+
+h6 {
+    color: mediumvioletred;
+    position: absolute;
+    left: 111%;
+    top: 10%;
+    width: 300px;
+    font-size: 55px;
+    font-family: barlow condensed,sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.image2:hover {
+    box-shadow: 3px 3px 9px;
+}
+
+p {
+    color: indianred;
+    position: absolute;
+    left: 120%;
+    top: 32%;
+    width: 460px;
+    font-size: 25px;
+    font-family: barlow condensed,sans-serif;
+    font-weight: normal;
+    text-align: justify;
+}
+
+.shoppn form input[type="submit"] {
+    position: absolute;
+    left: 120%;
+    top: 70%;
+    padding: 13px;
+    text-transform: uppercase;
+    background-color: crimson;
+    border: none;
+    color: antiquewhite;
+    font-family: barlow condensed,sans-serif;
+    letter-spacing: 3px;
+}
+
+/*form input[type="submit"] {
+    position: absolute;
+    left: 120%;
+    top: 70%;
+    padding: 13px;
+    text-transform: uppercase;
+    background-color: crimson;
+    border: none;
+    color: antiquewhite;
+    font-family: barlow condensed,sans-serif;
+    letter-spacing: 3px;*/
+
+
+form input[type="submit"]:hover {
+    background-color: red;
+}
+
+.aboutuscover img {
+    position: relative;
+    left: -34.3%;
+    width: 1920px;
+    height: 550px;
+}
+
+.aboutustext {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+h10 {
+    position: absolute;
+    color: antiquewhite;
+    font-size: 100px;
+    font-family: barlow condensed,sans-serif;
+    text-transform: capitalize;
+    width: 460px;
+    word-spacing: 0px;
+    font-weight: normal;
+    line-height: 72px;
+}
+
+

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Board";
+    if (Session["designerID"] == null)
+    {
+        Response.Redirect("~/Login/Designer");
+    }
+}
+<head>
+    <style>
+        body {
+            background-image: url('../../Content/Image/fashion-wallpaper-8.jpg');
+            background-repeat: no-repeat;
+        }
+        #login-div:not(asas) {
+            position: absolute;
+            left: 40%;
+            top: 20%;
+            border: 2px solid #ccc;
+            padding: 12px 12px;
+            background-color:#E2DCDB;
+                 }
+        #login-div img {
+            height: 400px;
+            width: 400px;
+        }
+
+        </style>
+</head>
+
+
+<body>
+    <div id="login-div">      
+            <img src="~/Content/Image/desigggner.png" />
+            <h2>Designer Information :</h2>
+            <br /> <br />
+            <h3>Designer ID: @Session["designerID"]</h3>
+            <h3>Designer Name: @Session["designerName"]</h3>
+            <h3>Designer Last Name: @Session["designerLastName"]</h3>
+            @*<h3>Designer Phone: @Session["designerPhone"]</h3>*@
+            <h3>Designer Email: @Session["designerEmail"]</h3>
+    </div>
+</body>
